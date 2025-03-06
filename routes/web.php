@@ -7,7 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/todos', [ToDoController::class, 'show']);
+Route::get('/todos', [ToDoController::class, 'index']);
 
 Route::get('/diaries', [DiaryController::class, 'index']);
 

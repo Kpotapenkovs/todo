@@ -13,7 +13,7 @@
 
 <ul>
   @foreach ($todos as $todo)
-    <li>{{ $todo->content }}</li>
+    <li><br>{{ $todo->content }}</li>
   @endforeach
 </ul>
 <li><a href="/todos/{{ $todo->id }}">{{ $todo->content }}</a></li>
