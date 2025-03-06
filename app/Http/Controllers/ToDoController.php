@@ -14,5 +14,9 @@ class ToDoController extends Controller
         $todos = ToDo::all();
         return view("todos.index", compact("todos"));
     }
+
+    public function show(ToDo $todo) {
+        return view("todos.show", compact("todo"));
+      }
 } 
     

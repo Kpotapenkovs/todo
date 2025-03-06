@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Veicamie uzdevumi</title>
+    
+    <title><x-navigation></x-navigation></title>
 </head>
 <body>
 
@@ -15,6 +16,6 @@
     <li>{{ $todo->content }}</li>
   @endforeach
 </ul>
-
+<li><a href="/todos/{{ $todo->id }}">{{ $todo->content }}</a></li>
 </body>
 </html>
