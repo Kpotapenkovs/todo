@@ -7,8 +7,7 @@
     <title>Veicamie uzdevumi</title>
 </head>
 <body>
-
-<h1>Veicamie uzdevdghjdghjfumi</h1>
+<h1><x-navigation></x-navigation></h1>
 
 <ul>
   @foreach ($diaries as $diary)
