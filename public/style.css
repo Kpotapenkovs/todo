@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: rgb(255, 223, 200) ;
   }
 
 li {
@@ -16,4 +17,31 @@ a {
 
 body {
     background-color: rgb(245, 255, 189);
+}
+
+div {
+    padding: 70px;
+    outline: thick ridge rgb(87, 56, 36);
+    background-color: rgb(170, 134, 101);
+    margin: 40px;
+  }
+
+.virsraksts_center{
+    background-color:rgb(236, 159, 108);
+    text-align: center;
+}
+
+.h1 {
+    display: inline;
+    text-align: center;
+}
+
+
+
+h2 {
+    text-align: center;
+}
+
+.a{
+    color: rgb(78, 92, 0);
 }

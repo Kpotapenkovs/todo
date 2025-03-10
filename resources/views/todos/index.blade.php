@@ -1,23 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    
-    <title>aaa</title>
-</head>
-<body>
 
-<h1><x-navigation></x-navigation></h1>
+<x-layout>
+
+<x-slot:title> todos </x-slot:title>
+
+<h1 class="virsraksts_center">todos</h1>
 
 
+<form>
 
-<ul>
-  @foreach ($todos as $todo)
-  <li><br><a href="/todos/{{ $todo->id }}">{{ $todo->content }}</a></li>
-  @endforeach
-</ul>
+<h2><a href="/todos/create" class="a">izveidot</a></h2>
 
-</body>
-</html>
+</form>
+
+<div>
+
+
+  <ul>
+    @foreach ($todos as $todo)
+      <li><br><a href="/todos/{{ $todo->id }}">{{ $todo->content }}</a><hr></li>
+    @endforeach
+  </ul>
+
+
+</div>
+
+</x-layout>
