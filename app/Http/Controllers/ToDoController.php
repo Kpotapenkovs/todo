@@ -15,7 +15,6 @@ class ToDoController extends Controller
         return view("todos.index", compact("todos"));
     }
 
-    
     public function show(ToDo $todo) {
         return view("todos.show", compact("todo"));
       }
@@ -25,10 +24,15 @@ class ToDoController extends Controller
         return view("todos.create", compact("todo"));
       }
 
+      public function edit(ToDo $todo) {
+        return view("todos.edit", compact("todo"));
+      }
+
     public function store(Request $request) {
         
         $validated = $request->validate([
-            "content" => ["required", "max:255"]
+            "content" => ["required", "max:255"],
+            "completed" => ["boolean"]
           ]);
         
         ToDo::create([
@@ -38,5 +42,25 @@ class ToDoController extends Controller
         
         return redirect("/todos");
     }
+
+
+
+
+    public function update(Request $request, ToDo $todo) {
+
+      $validated = $request->validate([
+        "content" => ["required", "max:255"],
+        "completed" => ["boolean"]
+      ]);
+
+      $todo->content = $validated["content"];
+      $todo->completed = $validated["completed"];
+      $todo->save();
+      return redirect("/todos");
+    }
+
+
+
+
 } 
     
