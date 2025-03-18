@@ -9,4 +9,12 @@
 
   <p>raksts: {{ $diary->body }}</p>
   <br><p>Datums: {{ $diary->date }}</p>
+
+  <form method="POST" action="{{$diary->id}}">
+  @csrf
+  @method("delete")
+  <input type="submit" name="delete" value="dzēst">
+
+  </form>
+
 </x-layout>

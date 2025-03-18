@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string("title", 100);
             $table->string("body");
+            $table->enum("priority", ["low", "medium", "high"]);
             $table->date("date");
             $table->timestamps();
         });
